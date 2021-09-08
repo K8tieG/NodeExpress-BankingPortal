@@ -12,4 +12,12 @@ app.set('view engine', 'ejs');
 //Configure the Static Directory
 app.use(express.static(path.join(__dirname, '/public')));
 
+// Create the Index Route
+app.get('/', (req, res) => {
+    res.render('index', {title: 'Index'})
+    });
 
+// Create a Server
+app.listen(3000, () => {
+    console.log('PS Project Running on port 3000!');
+});
