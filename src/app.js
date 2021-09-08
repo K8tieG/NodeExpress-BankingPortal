@@ -2,6 +2,8 @@ const fs = require ('fs');
 const path = require ('path');
 const express = require ('express');
 
+
+
 const app = express();
 
 
@@ -11,6 +13,10 @@ app.set('view engine', 'ejs');
 
 //Configure the Static Directory
 app.use(express.static(path.join(__dirname, '/public')));
+
+const accountData = fs.readFileSync('src/json/accounts.json', {encoding:'utf8'});
+const accounts = JSON.parse(accountData)
+
 
 // Create the Index Route
 app.get('/', (req, res) => {
