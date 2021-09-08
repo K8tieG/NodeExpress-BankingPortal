@@ -6,8 +6,7 @@ const app = express();
 
 
 // Configure the View Directory and Engine
-app.set = ('views', path.join(__dirname, './src/views'));
-// app.set('views', './src/views');
+app.set = ('views', path.join(__dirname, '/views'));
 app.set = ('view engine', 'ejs');
 
 //Configure the Static Directory
