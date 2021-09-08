@@ -25,7 +25,7 @@ const users = JSON.parse(userData);
 
 // Create the Index Route
 app.get('/', (req, res) => {
-    res.render('index', {title: 'Index'})
+    res.render('index', {title: 'Account Summary', accounts:'accounts'})
     });
 
 // Create a Server
