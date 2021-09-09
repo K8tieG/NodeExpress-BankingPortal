@@ -1,0 +1,24 @@
+<%- include('header'); %>
+<h1>
+    <%= Profile %>
+</h1>
+<div>
+    </p>
+        <%- include('user', {user:user.name})%>
+    <p>
+    </p>
+        <%- include('user', {user:user.username})%>
+    <p>
+    </p>
+        <%- include('user', {user:user.phone})%>
+    <p>
+    </p>
+        <%- include('user', {user:user.email})%>
+    <p>
+    </p>
+        <%- include('user', {user:user.address})%>
+    <p>  
+</div>
+<br>
+<a href="/">Back to Account Summary</a>
+<%- include('footer') %>
