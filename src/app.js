@@ -44,7 +44,7 @@ app.get('/profile', (req, res)=>{
 });
 //Create the transfer GET Route
 app.get('/transfer',(req,res)=>{
-    res.render('transfer',{transfer: transfer})
+    res.render('transfer')
 });
 // Create a Server
 app.listen(3000, () => {
