@@ -56,7 +56,7 @@ app.post('/transfer', (req,res)=>{
     const accountsJSON = JSON.stringify(accounts, null, 4);
 
     //Write account data to JSON file 
-    fs.writeFileSync('/json/accounts.json', data)
+    fs.writeFileSync('/json/accounts.json', accountsJSON)
 });
 
 
