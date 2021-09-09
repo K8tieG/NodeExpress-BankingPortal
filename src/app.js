@@ -23,7 +23,7 @@ const accounts = JSON.parse(accountData);
 const userData = fs.readFileSync('src/json/users.json', {encoding:'utf8'});
 const users = JSON.parse(userData);
 
-// Create the Index Route
+// Create the Index Route!! start here THRUSDAY this did not work :(
 app.get('/', (req, res) => {
     res.render('index', {title: 'Account Summary', accounts:'accounts'})
     });
