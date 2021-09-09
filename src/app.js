@@ -28,9 +28,15 @@ app.get('/', (req, res) => {
     res.render('index', {title: 'Account Summary', accounts: accounts})
     });
 
-// create the savings account route
+// create the savings/checking and credit account routes
 app.get('/savings', (req, res) => {
     res.render('account',{account: accounts.savings})
+})
+app.get('/savings', (req, res) => {
+    res.render('account',{account: accounts.credit})
+})
+app.get('/savings', (req, res) => {
+    res.render('account',{account: accounts.checking})
 })
 // Create a Server
 app.listen(3000, () => {
