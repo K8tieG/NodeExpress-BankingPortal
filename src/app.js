@@ -49,7 +49,8 @@ app.get('/transfer',(req,res)=>{
 
 //Create the transfer POST Route
 app.post('/transfer', (req,res)=>{
-    res.render(accounts["savings"].balance);
+    accounts[req.body.from].balance -= req.body.amount;
+    accounts[req.body.to].balance += parseInt(req.body.amount, 10);
 });
 
 
