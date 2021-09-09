@@ -2,10 +2,7 @@ const fs = require ('fs');
 const path = require ('path');
 const express = require ('express');
 
-
-
 const app = express();
-
 
 // Configure the View Directory and Engine
 app.set('views', path.join(__dirname, '/views'));
@@ -14,6 +11,8 @@ app.set('view engine', 'ejs');
 //Configure the Static Directory
 app.use(express.static(path.join(__dirname, '/public')));
 
+//URL encoded Middleware
+app.use(express.urlencoded({extended:true}));
 
 //read account data
 const accountData = fs.readFileSync('src/json/accounts.json', {encoding:'utf8'});
@@ -30,18 +29,18 @@ app.get('/', (req, res) => {
 
 // create the savings/checking and credit account routes
 app.get('/savings', (req, res) => {
-    res.render('account',{account: accounts.savings})
+    res.render('account',{account: accounts.savings});
 });
 app.get('/credit', (req, res) => {
-    res.render('account',{account: accounts.credit})
+    res.render('account',{account: accounts.credit});
 });
 app.get('/checking', (req, res) => {
-    res.render('account',{account: accounts.checking})
+    res.render('account',{account: accounts.checking});
 });
 
 //Create the profile route
 app.get('/profile', (req, res)=>{
-    res.render('profile',{user:users[0]})
+    res.render('profile',{user:users[0]});
 });
 
 // Create a Server
