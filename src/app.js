@@ -42,7 +42,10 @@ app.get('/checking', (req, res) => {
 app.get('/profile', (req, res)=>{
     res.render('profile',{user:users[0]});
 });
-
+//Create the transfer GET Route
+app.get('/transfer',(req,res)=>{
+    res.render('transfer',{transfer})
+});
 // Create a Server
 app.listen(3000, () => {
     console.log('PS Project Running on port 3000!');
