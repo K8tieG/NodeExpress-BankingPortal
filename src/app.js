@@ -32,10 +32,10 @@ app.get('/', (req, res) => {
 app.get('/savings', (req, res) => {
     res.render('account',{account: accounts.savings})
 })
-app.get('/savings', (req, res) => {
+app.get('/credit', (req, res) => {
     res.render('account',{account: accounts.credit})
 })
-app.get('/savings', (req, res) => {
+app.get('/checking', (req, res) => {
     res.render('account',{account: accounts.checking})
 })
 // Create a Server
