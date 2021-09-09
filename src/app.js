@@ -41,7 +41,7 @@ app.get('/checking', (req, res) => {
 
 //Create the profile route
 app.get('/profile', (req, res)=>{
-    res.render('profile',{user:user[0]})
+    res.render('profile',{user:users[0]})
 });
 
 // Create a Server
